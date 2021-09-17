@@ -128,10 +128,12 @@ img {
   max-width: 200px;
   min-width: 0;
   min-height: 0;
+  border: none;
+  background: none;
   cursor: pointer;
 }
 .hero-btn:focus {
-  outline: 2px dashed #17171d;
+  outline: 2px dashed #9f0bcc;
 }
 .hero-btn:hover svg {
   transform: scale(1.1);

@@ -157,11 +157,11 @@ img {
   min-width: 0;
   min-height: 0;
 
-  // border: none;
-  // background: none;
+  border: none;
+  background: none;
   cursor: pointer;
   &:focus {
-    outline: 2px dashed #17171d;
+    outline: 2px dashed #9f0bcc;
   }
   &:hover {
     svg {
