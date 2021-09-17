@@ -19,12 +19,14 @@ body {
   font-family: 'Rubik', sans-serif;
   overflow-x: hidden;
   min-height: 100%;
+  width: 100vw;
 }
 
 img {
   // display: block;
   max-width: 100%;
-  max-height: 100vh;
+
+  // max-height: 70vh;
 }
 
 .sr-only {
@@ -70,7 +72,7 @@ img {
   margin: auto;
 
   min-height: 50%;
-  max-height: 700px;
+  max-height: 60%;
   width: 95%;
 
   background-color: $hero-container-bg;
@@ -99,16 +101,21 @@ img {
   height: 100%;
 
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  grid-template-rows: 100px;
   grid-template-areas:
-    'name-bg name-bg'
     'sub-header hero-img'
     'hero-text hero-img'
     'hero-btn hero-img';
+
+  // gap: 1px;
+
+  min-height: 0;
+  min-width: 0;
+
+  // max-height: 100%;
 }
-.hero__name-bg {
-  grid-area: name-bg;
-}
+
 .sub-header {
   grid-area: sub-header;
 }
@@ -122,6 +129,9 @@ img {
 
   max-height: 100px;
   max-width: 200px;
+
+  min-width: 0;
+  min-height: 0;
 
   border: none;
   background: none;
@@ -140,9 +150,28 @@ img {
   }
 }
 
-.hero-img {
-  grid-area: hero-img;
-  min-width: 0;
+.hero-img-container {
+  // overflow: hidden;
 
+  // display: block;
+  grid-area: hero-img;
+  // max-height: 100%;
   z-index: 10;
+  // min-width: 0;
+
+  // overflow: hidden;
+  min-width: 0;
+  min-height: 0;
+
+  height: 100%;
+}
+
+.hero-img {
+  // height: 70vw;
+  // aspect-ratio: 1/ 1;
+  // min-width: 0;
+
+  width: inherit;
+  height: inherit;
+  object-fit: contain;
 }
