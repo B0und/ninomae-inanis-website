@@ -109,7 +109,8 @@ img {
 }
 
 .art-text {
-  margin: 15rem 0;
+  margin-top: 10rem;
+  margin-bottom: 5rem;
 }
 
 .art-img-container {
@@ -122,6 +123,40 @@ img {
   margin-bottom: 15rem;
 
   img {
-    margin:  0 auto;
+    margin: 0 auto;
+  }
+}
+
+// Wah section
+
+.wah-sound {
+  // height: 100%;
+  position: relative;
+}
+
+.desk {
+  display: block;
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  width: 100%;
+  height: $desk-height;
+  background-color: #855748;
+  border-top: 4px solid rgba(43, 40, 40, 0.541);
+}
+
+.wah-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  // width: ;
+  background: none;
+  border: none;
+  // margin-bottom: 10%;
+
+  img {
+    display: block;
+    position: absolute;
+    bottom: $desk-height;
   }
 }
