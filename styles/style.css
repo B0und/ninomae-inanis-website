@@ -1,61 +1,7 @@
-*,
-*::after,
-*::before {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-html {
-  font-size: 62.5%;
-  scroll-behavior: smooth;
-  min-height: 100%;
-  height: 100%;
-}
-
-body {
-  font-family: "Rubik", sans-serif;
-  overflow-x: hidden;
-  min-height: 100%;
-  width: 100vw;
-}
-
-img {
-  max-width: 100%;
-}
-
-.sr-only {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  border: 0;
-}
-
-.tako-ears {
-  position: absolute;
-  left: 30%;
-  bottom: 0;
-  display: none;
-}
-
-.light-pattern-bg {
-  position: relative;
-  overflow: hidden;
-  display: flex;
-  width: 100%;
-  height: 100vh;
-  padding: 0.5rem calc((100vw - 1400px) / 2);
-  background-color: #e2dee8;
-  background-image: linear-gradient(0deg, rgba(240, 223, 248, 0.911), rgba(240, 223, 248, 0.911)), url("/assets/bg-pattern1.jpg");
-}
-
 .hero__bg {
   position: relative;
   margin: auto;
+  min-height: 50%;
   max-height: 60%;
   width: 95%;
   background-color: #362d43;
@@ -141,4 +87,107 @@ img {
 .hero-btn svg {
   outline: none;
   transition: transform 0.15s linear;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+  min-height: 100%;
+  height: 100%;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  font-family: "Rubik", sans-serif;
+  overflow-x: hidden;
+  min-height: 100%;
+  width: 100vw;
+}
+
+img {
+  max-width: 100%;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+.tako-ears {
+  position: absolute;
+  left: 30%;
+  bottom: 0;
+  display: none;
+}
+
+.light-pattern-bg {
+  background-color: #e2dee8;
+  background-image: linear-gradient(0deg, rgba(240, 223, 248, 0.911), rgba(240, 223, 248, 0.911)), url("/assets/bg-pattern1.jpg");
+}
+
+.dark-pattern-bg {
+  background-color: #362d43;
+  background-image: linear-gradient(0deg, #362d43f3, #362d43f3), url("/assets/bg-pattern1.jpg");
+}
+
+.main-container {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  padding: 0.5rem calc((100vw - 1400px) / 2);
+}
+
+.art-section {
+  height: 100%;
+  text-align: center;
+}
+.art-section p {
+  color: #c4b5fd;
+  font-size: 3.6rem;
+}
+.art-section button {
+  color: #c4b5fd;
+  background: none;
+  border: none;
+  font-size: 9.6rem;
+  text-transform: uppercase;
+  font-weight: 500;
+  letter-spacing: 0.085em;
+}
+.art-section button:focus {
+  outline: 2px dashed #9f0bcc;
+}
+
+.art-text {
+  margin: 15rem 0;
+}
+
+.art-img-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1rem;
+  align-items: center;
+  margin-bottom: 15rem;
+}
+.art-img-container img {
+  margin: 0 auto;
 }/*# sourceMappingURL=style.css.map */
