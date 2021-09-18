@@ -144,6 +144,11 @@ img {
   background-image: linear-gradient(0deg, #362d43f3, #362d43f3), url("/assets/bg-pattern1.jpg");
 }
 
+.water-pattern-bg {
+  background-color: #409ccb;
+  background-image: linear-gradient(0deg, #409ccbf5, #409ccbf5), url("/assets/bg-pattern1.jpg");
+}
+
 .main-container {
   position: relative;
   overflow: hidden;
@@ -219,4 +224,13 @@ img {
   display: block;
   position: absolute;
   bottom: 15%;
+}
+
+.song h2 {
+  color: #c4b5fd;
+  margin-bottom: 10rem;
+  font-size: 9.6rem;
+  text-transform: uppercase;
+  font-weight: 500;
+  letter-spacing: 0.085em;
 }/*# sourceMappingURL=style.css.map */

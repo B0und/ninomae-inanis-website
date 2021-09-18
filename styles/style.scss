@@ -72,6 +72,17 @@ img {
     url('/assets/bg-pattern1.jpg');
 }
 
+.water-pattern-bg {
+  // fallback color
+  background-color: #409ccb;
+  background-image: linear-gradient(
+      0deg,
+      $bg-pattern3-color,
+      $bg-pattern3-color
+    ),
+    url('/assets/bg-pattern1.jpg');
+}
+
 .main-container {
   position: relative;
   overflow: hidden;
@@ -149,14 +160,38 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
-  // width: ;
+
   background: none;
   border: none;
-  // margin-bottom: 10%;
 
   img {
     display: block;
     position: absolute;
     bottom: $desk-height;
+  }
+}
+
+.song {
+  // height: 70vh;
+  // align-items: flex-start;
+  // justify-content: flex-start;
+
+  h2 {
+    // margin-top: 10rem;
+    color: $violet300;
+    margin-bottom: 10rem;
+    font-size: 9.6rem;
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: 0.085em;
+  }
+
+  img {
+    // justify-self: center;
+    // margin-bottom: 10%;
+    // min-height: 40vh;
+    // min-height: 100%;
+    // min-width: 100%;
+    // aspect-ratio: 1 ;
   }
 }
