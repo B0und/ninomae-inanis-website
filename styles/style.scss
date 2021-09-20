@@ -137,8 +137,9 @@ img {
     margin: 0 auto;
   }
 }
-
+///////////////////////
 // Wah section
+///////////////////////
 
 .wah-sound {
   // height: 100%;
@@ -170,16 +171,16 @@ img {
     bottom: $desk-height;
   }
 }
+///////////////////////
+// Music section
+///////////////////////
 
 .song {
-  // height: 70vh;
-  // align-items: flex-start;
-  // justify-content: flex-start;
-
   h2 {
-    // margin-top: 10rem;
     color: $violet300;
-    margin-bottom: 10rem;
+    // margin-bottom: 10rem;
+    margin: auto 0;
+
     font-size: 9.6rem;
     text-transform: uppercase;
     font-weight: 500;
@@ -187,11 +188,99 @@ img {
   }
 
   img {
-    // justify-self: center;
-    // margin-bottom: 10%;
-    // min-height: 40vh;
-    // min-height: 100%;
-    // min-width: 100%;
-    // aspect-ratio: 1 ;
+    margin-bottom: 10rem;
   }
+}
+
+footer {
+  text-align: center;
+  background-color: #242424;
+}
+
+.social-card {
+  position: relative;
+  // min-width: 60vw;
+  min-height: 300px;
+  // max-width: 10000px;
+  margin-top: auto;
+
+  border-radius: 77px;
+  background-color: #e2dee8;
+  display: grid;
+  gap: 10rem;
+  // align-items: center;
+  // vertical-align: middle;
+  grid-template-columns: minmax(100px, 1fr) 2fr;
+
+  img {
+    position: absolute;
+    margin-top: -10%;
+    filter: drop-shadow(3px 3px 3px rgb(67, 18, 146));
+  }
+}
+
+.social-card__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  blockquote {
+    quotes: '“' '”';
+    color: $violet900;
+    white-space: nowrap;
+
+    // margin-left: 2rem;
+    // margin-right: 10rem;
+    padding-right: 10rem;
+    width: 100%;
+
+    padding: 0 auto;
+    font-size: 4.8rem;
+    font-style: italic;
+    &::before {
+      content: open-quote;
+    }
+
+    &::after {
+      content: close-quote;
+    }
+    &::before,
+    &::after {
+      display: inline-block;
+      vertical-align: bottom;
+      font-size: 7rem;
+      opacity: 0.4;
+      top: 0.2em;
+      position: relative;
+    }
+  }
+}
+
+.social-card__links {
+  // margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1.5rem;
+  width: 100%;
+  margin-right: 10rem;
+  gap: 3rem;
+}
+
+.made-by {
+  margin-top: auto;
+  margin-bottom: 2rem;
+  color: #b6b2c0;
+  font-size: 2.4rem;
+
+  a {
+    color: #7f50ff;
+  }
+}
+
+.legal-text {
+  margin-bottom: 5%;
+  color: #b6b2c0;
+  font-size: 2.4rem;
 }

@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .hero__bg {
   position: relative;
   margin: auto;
@@ -228,9 +229,90 @@ img {
 
 .song h2 {
   color: #c4b5fd;
-  margin-bottom: 10rem;
+  margin: auto 0;
   font-size: 9.6rem;
   text-transform: uppercase;
   font-weight: 500;
   letter-spacing: 0.085em;
+}
+.song img {
+  margin-bottom: 10rem;
+}
+
+footer {
+  text-align: center;
+  background-color: #242424;
+}
+
+.social-card {
+  position: relative;
+  min-height: 300px;
+  margin-top: auto;
+  border-radius: 77px;
+  background-color: #e2dee8;
+  display: grid;
+  gap: 10rem;
+  grid-template-columns: minmax(100px, 1fr) 2fr;
+}
+.social-card img {
+  position: absolute;
+  margin-top: -10%;
+  filter: drop-shadow(3px 3px 3px #431292);
+}
+
+.social-card__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.social-card__content blockquote {
+  quotes: "“" "”";
+  color: #4c1d95;
+  white-space: nowrap;
+  padding-right: 10rem;
+  width: 100%;
+  padding: 0 auto;
+  font-size: 4.8rem;
+  font-style: italic;
+}
+.social-card__content blockquote::before {
+  content: open-quote;
+}
+.social-card__content blockquote::after {
+  content: close-quote;
+}
+.social-card__content blockquote::before, .social-card__content blockquote::after {
+  display: inline-block;
+  vertical-align: bottom;
+  font-size: 7rem;
+  opacity: 0.4;
+  top: 0.2em;
+  position: relative;
+}
+
+.social-card__links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1.5rem;
+  width: 100%;
+  margin-right: 10rem;
+  gap: 3rem;
+}
+
+.made-by {
+  margin-top: auto;
+  margin-bottom: 2rem;
+  color: #b6b2c0;
+  font-size: 2.4rem;
+}
+.made-by a {
+  color: #7f50ff;
+}
+
+.legal-text {
+  margin-bottom: 5%;
+  color: #b6b2c0;
+  font-size: 2.4rem;
 }/*# sourceMappingURL=style.css.map */
