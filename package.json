@@ -1,0 +1,22 @@
+{
+  "name": "ninomae-inanis-website",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/B0und/ninomae-inanis-website.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/B0und/ninomae-inanis-website/issues"
+  },
+  "homepage": "https://github.com/B0und/ninomae-inanis-website#readme",
+  "dependencies": {
+    "animejs": "^3.2.1"
+  }
+}

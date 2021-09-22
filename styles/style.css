@@ -104,6 +104,8 @@ html {
   min-height: 100%;
   height: 100%;
   text-rendering: optimizeLegibility;
+  -ms-scroll-snap-type: y mandatory;
+      scroll-snap-type: y mandatory;
 }
 
 body {
@@ -145,12 +147,8 @@ img {
   background-image: linear-gradient(0deg, #362d43f3, #362d43f3), url("/assets/bg-pattern1.jpg");
 }
 
-.water-pattern-bg {
-  background-color: #409ccb;
-  background-image: linear-gradient(0deg, #409ccbf5, #409ccbf5), url("/assets/bg-pattern1.jpg");
-}
-
 .main-container {
+  scroll-snap-align: start;
   position: relative;
   overflow: hidden;
   display: flex;
@@ -164,6 +162,7 @@ img {
 
 .art-section {
   height: 100%;
+  min-height: 100vh;
   text-align: center;
 }
 .art-section p {
@@ -178,14 +177,15 @@ img {
   text-transform: uppercase;
   font-weight: 500;
   letter-spacing: 0.085em;
+  outline: none;
 }
 .art-section button:focus {
-  outline: 2px dashed #9f0bcc;
+  border-bottom: 3px solid #9f0bcc;
+  margin-bottom: -3px;
 }
 
 .art-text {
-  margin-top: 10rem;
-  margin-bottom: 5rem;
+  margin: 5rem 0;
 }
 
 .art-img-container {
@@ -197,6 +197,17 @@ img {
 }
 .art-img-container img {
   margin: 0 auto;
+}
+
+.thumbnail-text-style {
+  text-transform: lowercase !important;
+  font-size: 4.8rem !important;
+  background-image: linear-gradient(#fbff00, #ff0000) !important;
+  color: transparent !important;
+  -webkit-background-clip: text !important;
+          background-clip: text !important;
+  border-bottom: 3px solid #ff00007c !important;
+  margin-bottom: 3px !important;
 }
 
 .wah-sound {
@@ -218,16 +229,22 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: none;
   border: none;
+  cursor: pointer;
 }
 .wah-button img {
   display: block;
   position: absolute;
   bottom: 15%;
+  filter: brightness(0.05);
 }
 
+.song {
+  padding-top: 5rem;
+  gap: 5rem;
+}
 .song h2 {
+  display: block;
   color: #c4b5fd;
   margin: auto 0;
   font-size: 9.6rem;
@@ -235,11 +252,24 @@ img {
   font-weight: 500;
   letter-spacing: 0.085em;
 }
-.song img {
-  margin-bottom: 10rem;
+.song .video {
+  position: relative;
+  margin-bottom: 5rem;
+  width: 100%;
+  height: 0;
+  padding-bottom: 40%;
+}
+.song .video__embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
 }
 
 footer {
+  scroll-snap-align: start;
   text-align: center;
   background-color: #242424;
 }
@@ -305,14 +335,15 @@ footer {
   margin-top: auto;
   margin-bottom: 2rem;
   color: #b6b2c0;
-  font-size: 2.4rem;
+  font-size: 1.6rem;
 }
 .made-by a {
   color: #7f50ff;
+  text-decoration: none;
 }
 
 .legal-text {
   margin-bottom: 5%;
   color: #b6b2c0;
-  font-size: 2.4rem;
+  font-size: 1.6rem;
 }/*# sourceMappingURL=style.css.map */

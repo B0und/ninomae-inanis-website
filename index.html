@@ -18,6 +18,9 @@
       href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
       rel="stylesheet"
     />
+    <script src="js/image-switch.js" defer></script>
+    <script src="node_modules/animejs/lib/anime.min.js"></script>
+    <script src="js/wah.js" defer></script>
   </head>
   <body>
     <!-- Hero section -->
@@ -85,21 +88,27 @@
         <button style="display: none">Tentacle with eye</button>
       </div>
     </main>
-    <section class="main-container art-section dark-pattern-bg">
+    <section
+      id="art-section"
+      class="main-container art-section dark-pattern-bg"
+    >
       <div class="art-text">
         <p>with a <i>passion</i> for</p>
-        <button>Art</button>
+        <button id="art-switch-btn">Art</button>
       </div>
       <div class="art-img-container">
         <img
+          id="img-1"
           src="assets/art-img3.jpg"
           alt="Calliope Mori illustration drawn by Ina"
         />
         <img
+          id="img-2"
           src="assets/art-img2.jpg"
           alt="Ninomae Ina illustration drawn by Ina"
         />
         <img
+          id="img-3"
           src="assets/art-img1.jpg"
           alt="Gawr Gura illustration drawn by Ina"
         />
@@ -115,7 +124,18 @@
     <!-- Song section -->
     <section class="main-container song dark-pattern-bg">
       <h2>Music</h2>
-      <img src="assets/violet.jpg" alt="Violet MV cover" />
+      <div class="video">
+        <iframe
+          class="video__embed"
+          width="560"
+          height="315"
+          src="https://www.youtube-nocookie.com/embed/8ZdLXELdF9Q"
+          title="YouTube video player"
+          frameborder="0"
+          allow="encrypted-media;"
+          allowfullscreen
+        ></iframe>
+      </div>
     </section>
     <!-- Footer -->
     <footer class="main-container">
@@ -129,7 +149,7 @@
         <div class="social-card__content">
           <blockquote>We live Ina society</blockquote>
           <div class="social-card__links">
-            <a href="#">
+            <a href="https://twitter.com/ninomaeinanis" target="_blank">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 48 48"
@@ -142,7 +162,10 @@
                 />
               </svg>
             </a>
-            <a href="#">
+            <a
+              href="https://www.youtube.com/channel/UCMwGHR0BTZuLsmjY_NT5Pwg"
+              target="_blank"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 48 48"

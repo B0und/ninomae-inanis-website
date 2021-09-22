@@ -16,6 +16,8 @@ html {
   height: 100%;
 
   text-rendering: optimizeLegibility;
+
+  scroll-snap-type: y mandatory;
 }
 
 body {
@@ -72,18 +74,9 @@ img {
     url('/assets/bg-pattern1.jpg');
 }
 
-.water-pattern-bg {
-  // fallback color
-  background-color: #409ccb;
-  background-image: linear-gradient(
-      0deg,
-      $bg-pattern3-color,
-      $bg-pattern3-color
-    ),
-    url('/assets/bg-pattern1.jpg');
-}
-
 .main-container {
+  scroll-snap-align: start;
+
   position: relative;
   overflow: hidden;
   display: flex;
@@ -97,6 +90,7 @@ img {
 
 .art-section {
   height: 100%;
+  min-height: 100vh;
   text-align: center;
 
   p {
@@ -112,16 +106,17 @@ img {
     text-transform: uppercase;
     font-weight: 500;
     letter-spacing: 0.085em;
+    outline: none;
 
     &:focus {
-      outline: 2px dashed #9f0bcc;
+      border-bottom: 3px solid #9f0bcc;
+      margin-bottom: -3px;
     }
   }
 }
 
 .art-text {
-  margin-top: 10rem;
-  margin-bottom: 5rem;
+  margin: 5rem 0;
 }
 
 .art-img-container {
@@ -136,6 +131,16 @@ img {
   img {
     margin: 0 auto;
   }
+}
+
+.thumbnail-text-style {
+  text-transform: lowercase !important;
+  font-size: 4.8rem !important;
+  background-image: linear-gradient(#fbff00, #ff0000) !important;
+  color: transparent !important;
+  background-clip: text !important;
+  border-bottom: 3px solid #ff00007c !important;
+  margin-bottom: 3px !important;
 }
 ///////////////////////
 // Wah section
@@ -162,13 +167,20 @@ img {
   align-items: center;
   justify-content: center;
 
-  background: none;
+  // background: none;
   border: none;
+
+  // position: relative;
+
+  cursor: pointer;
+  // background-color: black;
 
   img {
     display: block;
     position: absolute;
     bottom: $desk-height;
+    // background-color: black;
+    filter: brightness(0.05);
   }
 }
 ///////////////////////
@@ -176,9 +188,13 @@ img {
 ///////////////////////
 
 .song {
+  padding-top: 5rem;
+  gap: 5rem;
   h2 {
+    display: block;
     color: $violet300;
     // margin-bottom: 10rem;
+    // padding-top: 10rem;
     margin: auto 0;
 
     font-size: 9.6rem;
@@ -187,12 +203,29 @@ img {
     letter-spacing: 0.085em;
   }
 
-  img {
-    margin-bottom: 10rem;
+  .video {
+    // display: block;
+    position: relative;
+    margin-bottom: 5rem;
+    width: 100%;
+    // max-width: 60vw;
+    height: 0;
+    // max-height: 40vh;
+    padding-bottom: 40%;
+  }
+  .video__embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
   }
 }
 
 footer {
+  scroll-snap-align: start;
+
   text-align: center;
   background-color: #242424;
 }
@@ -272,15 +305,16 @@ footer {
   margin-top: auto;
   margin-bottom: 2rem;
   color: #b6b2c0;
-  font-size: 2.4rem;
+  font-size: 1.6rem;
 
   a {
     color: #7f50ff;
+    text-decoration: none;
   }
 }
 
 .legal-text {
   margin-bottom: 5%;
   color: #b6b2c0;
-  font-size: 2.4rem;
+  font-size: 1.6rem;
 }
