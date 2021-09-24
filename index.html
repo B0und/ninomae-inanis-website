@@ -19,48 +19,14 @@
       rel="stylesheet"
     />
     <script src="js/image-switch.js" defer></script>
-    <script src="node_modules/animejs/lib/anime.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
+    <!-- <script src="node_modules/animejs/lib/anime.min.js"></script> -->
     <script src="js/wah.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/dat.gui@0.7.7/build/dat.gui.min.js"></script>
   </head>
   <body>
     <!-- Hero section -->
     <main class="main-container light-pattern-bg">
-      <!-- Tako ears -->
-      <div class="tako-ears">
-        <svg
-          width="799"
-          height="303"
-          viewBox="0 0 799 303"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <ellipse cx="399.5" cy="361" rx="399.5" ry="149" fill="#312843" />
-          <rect
-            x="1.92257"
-            y="0.896509"
-            width="319"
-            height="121"
-            rx="50"
-            transform="matrix(0.34202 0.939693 0.939693 -0.34202 77.4226 41.807)"
-            fill="#312843"
-            stroke="#9187A2"
-            stroke-width="3"
-          />
-          <rect
-            x="-0.896509"
-            y="-1.92257"
-            width="319"
-            height="121"
-            rx="50"
-            transform="matrix(0.34202 -0.939693 -0.939693 -0.34202 640.125 341.569)"
-            fill="#312843"
-            stroke="#9187A2"
-            stroke-width="3"
-          />
-        </svg>
-      </div>
-      <!-- Tako ears End-->
-
       <div class="hero__bg">
         <div class="hero__name-bg">
           <h1>Ninomae Ina'nis</h1>
@@ -77,7 +43,7 @@
               deliver random sanity checks on humanity, as an ordinary girl...
             </p>
 
-            <button class="hero-btn">
+            <a href="#art-section" class="hero-btn">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="100"
@@ -190,7 +156,7 @@
                   </filter>
                 </defs>
               </svg>
-            </button>
+            </a>
           </div>
           <div class="hero-img-container">
             <img class="hero-img" src="assets/hero-ina.png" alt="" />
@@ -206,7 +172,23 @@
     >
       <div class="art-text">
         <p>with a <i>passion</i> for</p>
-        <button id="art-switch-btn">Art</button>
+        <div class="art-switch-container">
+          <button id="art-switch-btn">Art</button>
+          <svg class="art-ripples" width="300" height="100">
+            <circle
+              class="art-wave"
+              style="
+                fill: none;
+                stroke: #5b21b6;
+                stroke-width: 1px;
+                opacity: 0.1;
+              "
+              cx="50%"
+              cy="50%"
+              r="10"
+            ></circle>
+          </svg>
+        </div>
       </div>
       <div class="art-img-container">
         <img
@@ -231,6 +213,22 @@
       <div class="desk"></div>
       <button class="wah-button">
         <img src="assets/ina-face.png" alt="" />
+        <svg class="art-ripples" width="100%" height="100%">
+          <circle
+            class="wah-wave"
+            style="fill: none; stroke: #5b21b6; stroke-width: 0px; opacity: 10"
+            cx="50%"
+            cy="50%"
+            r="10%"
+          ></circle>
+          <circle
+            class="wah-wave"
+            style="fill: none; stroke: #5b21b6; stroke-width: 0px; opacity: 0"
+            cx="50%"
+            cy="50%"
+            r="10%"
+          ></circle>
+        </svg>
       </button>
     </section>
     <!-- Song section -->

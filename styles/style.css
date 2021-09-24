@@ -3,7 +3,7 @@
   position: relative;
   margin: auto;
   min-height: 50%;
-  max-height: 60%;
+  max-height: max(470px, 55%);
   width: 95%;
   background-color: #362d43;
   border-radius: 20px;
@@ -126,13 +126,6 @@ img {
   border: 0;
 }
 
-.tako-ears {
-  position: absolute;
-  left: 30%;
-  bottom: 0;
-  display: none;
-}
-
 .light-pattern-bg {
   background-color: #e2dee8;
   background-image: linear-gradient(0deg, rgba(240, 223, 248, 0.911), rgba(240, 223, 248, 0.911)), url("/assets/bg-pattern1.jpg");
@@ -166,7 +159,7 @@ img {
   font-size: 3.6rem;
 }
 .art-section button {
-  color: #c4b5fd;
+  color: #a997f0;
   background: none;
   border: none;
   font-size: 9.6rem;
@@ -174,6 +167,8 @@ img {
   font-weight: 500;
   letter-spacing: 0.085em;
   outline: none;
+  z-index: 3;
+  cursor: pointer;
 }
 .art-section button:focus {
   border-bottom: 3px solid #9f0bcc;
@@ -193,6 +188,21 @@ img {
 }
 .art-img-container img {
   margin: 0 auto;
+}
+
+.art-switch-container {
+  position: relative;
+}
+
+.art-ripples {
+  z-index: 2;
+  pointer-events: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .thumbnail-text-style {
@@ -231,7 +241,7 @@ img {
   display: block;
   position: absolute;
   bottom: 15%;
-  filter: brightness(0.05);
+  filter: brightness(0.05) drop-shadow(0px 0px 20px rgba(177, 91, 226, 0.733));
 }
 
 .song {

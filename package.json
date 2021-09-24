@@ -18,6 +18,7 @@
   "homepage": "https://github.com/B0und/ninomae-inanis-website#readme",
   "dependencies": {
     "animejs": "^3.2.1",
+    "dat.gui": "^0.7.7",
     "stylelint": "^13.13.1"
   },
   "devDependencies": {
