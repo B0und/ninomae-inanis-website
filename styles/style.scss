@@ -155,7 +155,6 @@ img {
   display: block;
   position: absolute;
   bottom: 0;
-  display: flex;
   width: 100%;
   height: $desk-height;
   background-color: #855748;
@@ -265,10 +264,10 @@ footer {
 
     // margin-left: 2rem;
     // margin-right: 10rem;
+    padding: 0 auto;
     padding-right: 10rem;
     width: 100%;
 
-    padding: 0 auto;
     font-size: 4.8rem;
     font-style: italic;
     &::before {
