@@ -19,22 +19,23 @@ const waveOutAnimation = anime({
   loop: true,
 })
 
-// const waveInAnimation = anime({
-//   targets: '.wah-wave',
-//   r: [100, 10],
-//   opacity: [
-//     { value: 0.5, duration: 250 },
-//     { value: 0.0, duration: 1000 },
-//   ],
-//   'stroke-width': [10, 20, 0],
-//   duration: 2500,
-//   easing: 'easeInOutSine',
-//   loop: true,
-// })
+const waveInAnimation = anime({
+  autoplay: false,
+  targets: '.wah-wave',
+  r: [100, 5],
+  opacity: [
+    { value: 0.7, duration: 500 },
+    { value: 0.1, duration: 1000 },
+  ],
+  'stroke-width': [18, 5],
+  duration: 1800,
+  easing: 'easeInOutSine',
+  delay: anime.stagger(500),
+  loop: false,
+})
 
 var wahTimeline = anime.timeline({
   autoplay: false,
-  duration: 3000,
   complete: function () {
     targetElm.style.filter =
       'brightness(0.05) drop-shadow(0px 0px 20px rgba(177, 91, 226, 0.733)'
@@ -44,12 +45,12 @@ var wahTimeline = anime.timeline({
 
 wahTimeline
   .add({
-    duration: 2000,
+    duration: 4000,
     easing: 'easeInOutExpo',
     update: function (anim) {
       targetElm.style.filter = 'brightness(' + anim.progress / 100 + ')'
     },
-  })
+  }, "+=1000")
   .add({
     begin: () => {
       audio.play()
@@ -59,6 +60,7 @@ wahTimeline
 const wahClick = () => {
   waveOutAnimation.restart()
   waveOutAnimation.pause()
+  waveInAnimation.play()
   wahTimeline.play()
 }
 
