@@ -1,10 +1,6 @@
 var targetElm = document.querySelector('.wah-button img')
 var audio = new Audio('assets/ina-wah-echo.mp3')
 
-let props = {
-  staggerDelay: 500,
-  radius: 200,
-}
 
 const waveOutAnimation = anime({
   targets: '.wah-wave-1',

@@ -1,4 +1,6 @@
 .hero__bg {
+  transform-origin: right;
+  will-change: transform;
   position: relative;
   margin: auto;
 
@@ -15,6 +17,10 @@
   top: -$hero-name-bg-height/2;
   right: 0;
 
+  transform-origin: right;
+  will-change: transform;
+  // transform: scaleX(0.7);
+
   height: $hero-name-bg-height;
   width: 95%;
 
@@ -27,17 +33,20 @@
   background-color: $hero-name-bg;
 
   h1 {
+    opacity: 0;
     font-size: 4.8rem;
     color: $violet200;
   }
 }
 
 .hero-container {
+  
   display: flex;
   margin-top: $hero-container-top-margin;
   padding-left: $hero-name-bg-height / 4.7;
 
   h2 {
+    opacity: 0;
     font-size: 2.4rem;
     text-transform: uppercase;
     color: $violet400;
@@ -46,6 +55,7 @@
   }
 
   p {
+    opacity: 0;
     position: relative;
     margin-top: 2rem;
     font-family: 'Roboto', sans-serif;
@@ -61,7 +71,6 @@
   }
 }
 .hero-img-container {
-  // height: calc(#{$a} + 7px);
   margin-top: calc(
     (#{$hero-name-bg-height} / 1.8 + #{$hero-container-top-margin}) * -1
   );
@@ -72,6 +81,7 @@
   min-width: 500px;
 }
 .hero-img {
+  opacity: 0;
   object-fit: contain;
   width: 100%;
   height: 100%;
@@ -80,12 +90,7 @@
 }
 
 .hero-btn {
-  // max-height: 100px;
-  // max-width: 200px;
-
-  // min-width: 0;
-  // min-height: 0;
-
+  opacity: 0;
   border: none;
   background: none;
   cursor: pointer;
@@ -106,6 +111,37 @@
     }
   }
 }
-// svg path:nth-of-type(2) {
 
+// .slide-rtl {
+//   transform-origin: right;
+//   animation: slideRTL .8s ease-out;
+// }
+
+// // Right To Left
+// @keyframes slideRTL {
+//   0% {
+//     opacity: 0;
+//     transform: scaleX(0);
+//   }
+//   100% {
+//     opacity: 1;
+//     transform: scaleX(100%);
+//   }
+// }
+
+// .animate-hero-image {
+//   transform-origin: right;
+//   animation: heroIna .8s ease-out;
+//   animation-delay: 0.4s;
+// }
+
+// @keyframes heroIna {
+//   0% {
+//     opacity: 0;
+//     // transform: scaleX(0) ;
+//   }
+//   100% {
+//     opacity: 1;
+//     // transform: scaleX(100%) ;
+//   }
 // }

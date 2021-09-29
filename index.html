@@ -18,16 +18,15 @@
       href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
       rel="stylesheet"
     />
-    <script src="js/image-switch.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
-    <!-- <script src="node_modules/animejs/lib/anime.min.js"></script> -->
+    <script src="js/image-switch.js" defer></script>
     <script src="js/wah.js" defer></script>
-    <script src="https://cdn.jsdelivr.net/npm/dat.gui@0.7.7/build/dat.gui.min.js"></script>
+    <script src="js/hero.js" defer></script>
   </head>
   <body>
     <!-- Hero section -->
     <main class="main-container light-pattern-bg scrollable-object">
-      <div class="hero__bg">
+      <div class="hero__bg slide-rtl">
         <div class="hero__name-bg">
           <h1>Ninomae Ina'nis</h1>
         </div>
@@ -158,12 +157,10 @@
               </svg>
             </a>
           </div>
-          <div class="hero-img-container">
+          <div class="hero-img-container  animate-hero-image">
             <img class="hero-img" src="assets/hero-ina.png" alt="" />
           </div>
         </div>
-        <!-- fixme later -->
-        <button style="display: none">Tentacle with eye</button>
       </div>
     </main>
     <section
