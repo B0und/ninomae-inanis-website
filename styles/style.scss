@@ -17,8 +17,17 @@ html {
 
   text-rendering: optimizeLegibility;
 
-  scroll-snap-type: y mandatory;
+  
 }
+@supports (-moz-appearance:none) {
+  html { scroll-snap-type: y mandatory;
+  } 
+  .scrollable-object {
+    scroll-snap-align: start;
+    scroll-snap-stop: always
+  }
+}
+
 
 body {
   font-family: 'Rubik', sans-serif;
@@ -67,8 +76,8 @@ img {
     url('/assets/bg-pattern1.jpg');
 }
 
+
 .main-container {
-  scroll-snap-align: start;
 
   position: relative;
   overflow: hidden;
@@ -158,7 +167,26 @@ img {
   position: relative;
 }
 
+.wah-text {
+  backface-visibility: hidden;
+  -webkit-font-smoothing: subpixel-antialiased;
+  will-change: transform;
+
+  pointer-events: none;
+
+  position: absolute;
+  margin: auto;
+  font-size: 15rem;
+  z-index: 50;
+  color: $violet400;
+  opacity: 0;
+  scale: 1;
+  transform: translateZ(0);
+}
+
+
 .desk {
+  z-index: 50;
   display: block;
   position: absolute;
   bottom: 0;
@@ -191,6 +219,11 @@ img {
     }
   }
 }
+
+
+
+
+
 .ina-face{
   z-index: 5;
 }
@@ -235,7 +268,6 @@ img {
 }
 
 footer {
-  scroll-snap-align: start;
 
   text-align: center;
   background-color: #242424;

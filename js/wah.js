@@ -34,6 +34,19 @@ const waveInAnimation = anime({
   loop: false,
 })
 
+const wahTextAnimation = anime({
+  autoplay: false,
+  targets: '.wah-text',
+  opacity: [
+    { value: 0.7, duration: 500 },
+    { value: 0, duration: 1000 },
+  ],
+  scale: 2,
+  duration: 1800,
+  easing: 'easeInOutSine',
+  loop: false,
+})
+
 var wahTimeline = anime.timeline({
   autoplay: false,
   complete: function () {
@@ -44,16 +57,20 @@ var wahTimeline = anime.timeline({
 })
 
 wahTimeline
-  .add({
-    duration: 4000,
-    easing: 'easeInOutExpo',
-    update: function (anim) {
-      targetElm.style.filter = 'brightness(' + anim.progress / 100 + ')'
+  .add(
+    {
+      duration: 4000,
+      easing: 'easeInOutExpo',
+      update: function (anim) {
+        targetElm.style.filter = 'brightness(' + anim.progress / 100 + ')'
+      },
     },
-  }, "+=1000")
+    '+=1000'
+  )
   .add({
     begin: () => {
       audio.play()
+      wahTextAnimation.play()
     },
   })
 
