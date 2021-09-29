@@ -1,6 +1,7 @@
 var targetElm = document.querySelector('.wah-button img')
-var audio = new Audio('assets/ina-wah-echo.mp3')
+var audio = new Audio('assets/ina-wah-better.mp3')
 
+let intViewportWidth = window.innerWidth
 
 const waveOutAnimation = anime({
   targets: '.wah-wave-1',
@@ -34,11 +35,11 @@ const wahTextAnimation = anime({
   autoplay: false,
   targets: '.wah-text',
   opacity: [
-    { value: 0.7, duration: 500 },
+    { value: 1, duration: 500 },
     { value: 0, duration: 1000 },
   ],
-  scale: 2,
-  duration: 1800,
+  scale: intViewportWidth > 900 ? 3 : 2,
+  duration: 3000,
   easing: 'easeInOutSine',
   loop: false,
 })
@@ -46,8 +47,10 @@ const wahTextAnimation = anime({
 var wahTimeline = anime.timeline({
   autoplay: false,
   complete: function () {
+    document.querySelector('.wah-button img').onclick = wahClick
     targetElm.style.filter =
       'brightness(0.05) drop-shadow(0px 0px 20px rgba(177, 91, 226, 0.733)'
+
     waveOutAnimation.play()
   },
 })
@@ -71,6 +74,7 @@ wahTimeline
   })
 
 const wahClick = () => {
+  document.querySelector('.wah-button img').onclick = null
   waveOutAnimation.restart()
   waveOutAnimation.pause()
   waveInAnimation.play()
