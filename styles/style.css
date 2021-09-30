@@ -137,7 +137,7 @@
   border: none;
   background: none;
   cursor: pointer;
-  width: fit-content;
+  max-width: 100px;
   transition: all 0.15s linear;
 }
 .hero-btn:focus {
@@ -533,7 +533,6 @@ footer {
   justify-content: center;
   margin-top: 1.5rem;
   width: 100%;
-  margin-right: 10rem;
   gap: 3rem;
 }
 @media screen and (max-width: 415px) {

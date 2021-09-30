@@ -4,7 +4,7 @@
     "sass": "sass --watch styles/style.scss styles/style.css",
     "dev": "parcel index.html",
     "build": "rm -r dist | parcel build index.html --public-url ./",
-    "subtree": "git subtree push --prefix dist origin gh-pages"
+    "deploy": "gh-pages --dist 'dist' --branch 'gh-pages'"
   },
   "devDependencies": {
     "parcel-bundler": "^1.12.5",
@@ -13,6 +13,7 @@
   "dependencies": {
     "assets": "^3.0.1",
     "autoprefixer": "^10.3.6",
+    "gh-pages": "^3.2.3",
     "postcss-modules": "^4.2.2"
   }
 }
