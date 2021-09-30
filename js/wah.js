@@ -60,7 +60,7 @@ var wahTimeline = anime.timeline({
 wahTimeline
   .add(
     {
-      duration: 4000,
+      duration: 3000,
       easing: 'easeInOutExpo',
       update: function (anim) {
         targetElm.style.filter = 'brightness(' + anim.progress / 100 + ')'
