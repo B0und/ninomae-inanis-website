@@ -1,5 +1,7 @@
+let audioUrl = require('../assets/ina-wah-better.mp3');
+let audio = new Audio(audioUrl);
+
 var targetElm = document.querySelector('.wah-button img')
-var audio = new Audio('assets/ina-wah-better.mp3')
 
 let intViewportWidth = window.innerWidth
 

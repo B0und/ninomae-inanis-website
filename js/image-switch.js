@@ -1,3 +1,10 @@
+let artImg1 = require('../assets/art-img1.jpg')
+let artImg2 = require('../assets/art-img2.jpg')
+let artImg3 = require('../assets/art-img3.jpg')
+let memeImg1 = require('../assets/meme-img1.jpg')
+let memeImg2 = require('../assets/meme-img2.jpg')
+let memeImg3 = require('../assets/meme-img3.jpg')
+
 let artBtn = document.getElementById('art-switch-btn')
 const img1 = document.getElementById('img-1')
 const img2 = document.getElementById('img-2')
@@ -29,16 +36,16 @@ artBtn.addEventListener('click', () => {
 
   if (isPressed) {
     artBtn.textContent = 'thumbnails'
-    img1.src = 'assets/meme-img1.jpg'
-    img2.src = 'assets/meme-img2.jpg'
-    img3.src = 'assets/meme-img3.jpg'
+    img1.src = memeImg1
+    img2.src = memeImg2
+    img3.src = memeImg3
     waveAnimation.restart()
     waveAnimation.pause()
   } else {
     artBtn.textContent = 'art'
-    img1.src = 'assets/art-img3.jpg'
-    img2.src = 'assets/art-img2.jpg'
-    img3.src = 'assets/art-img1.jpg'
+    img1.src = artImg1
+    img2.src = artImg2
+    img3.src = artImg3
     waveAnimation.play()
   }
   document

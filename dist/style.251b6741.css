@@ -153,12 +153,12 @@ img {
 
 .light-pattern-bg {
   background-color: #e2dee8;
-  background-image: linear-gradient(0deg, rgba(240, 223, 248, 0.911), rgba(240, 223, 248, 0.911)), url("/assets/bg-pattern1.jpg");
+  background-image: linear-gradient(0deg, rgba(240, 223, 248, 0.911), rgba(240, 223, 248, 0.911)), url("/bg-pattern1.b98ee74e.jpg");
 }
 
 .dark-pattern-bg {
   background-color: #362d43;
-  background-image: linear-gradient(0deg, #362d43f3, #362d43f3), url("/assets/bg-pattern1.jpg");
+  background-image: linear-gradient(0deg, #362d43f3, #362d43f3), url("/bg-pattern1.b98ee74e.jpg");
 }
 
 .main-container {
@@ -426,4 +426,6 @@ footer {
   margin-bottom: 5%;
   color: #b6b2c0;
   font-size: 1.6rem;
-}/*# sourceMappingURL=style.css.map */
+}
+
+/*# sourceMappingURL=/style.251b6741.css.map */

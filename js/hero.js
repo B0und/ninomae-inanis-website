@@ -37,7 +37,6 @@ heroTimeline
     {
       targets: '.hero-img',
       opacity: [0, 1],
-      //   translateX: [150, 0],
       easing: 'easeOutSine',
       duration: 800,
       direction: 'normal',

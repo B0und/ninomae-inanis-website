@@ -1,3 +1,5 @@
+@import "media_queries";
+
 .hero__bg {
   transform-origin: right;
   will-change: transform;
@@ -19,7 +21,6 @@
 
   transform-origin: right;
   will-change: transform;
-  // transform: scaleX(0.7);
 
   height: $hero-name-bg-height;
   width: 95%;
@@ -32,23 +33,36 @@
   border-bottom-right-radius: 0;
   background-color: $hero-name-bg;
 
+  @include tablet {
+    // height: 10%;
+    // width: 80%;
+    // top: -50px;
+  }
+
   h1 {
     opacity: 0;
+    font-weight: 500;
     font-size: 4.8rem;
     color: $violet200;
   }
 }
 
 .hero-container {
-  
   display: flex;
   margin-top: $hero-container-top-margin;
   padding-left: $hero-name-bg-height / 4.7;
+  @include tablet {
+
+  }
 
   h2 {
     opacity: 0;
     font-size: 2.4rem;
+    @include tablet {
+    }
+    // min-width: 50ch;
     text-transform: uppercase;
+    font-weight: 500;
     color: $violet400;
     white-space: nowrap;
     letter-spacing: 1px;
@@ -70,6 +84,7 @@
     border-left: 5px solid $highlight-yellow;
   }
 }
+
 .hero-img-container {
   margin-top: calc(
     (#{$hero-name-bg-height} / 1.8 + #{$hero-container-top-margin}) * -1
@@ -79,6 +94,11 @@
   flex-basis: 600px;
   max-width: 600px;
   min-width: 500px;
+
+  @include tablet {
+    // max-height: 500px;
+    max-width: 200px;
+  }
 }
 .hero-img {
   opacity: 0;
@@ -112,36 +132,3 @@
   }
 }
 
-// .slide-rtl {
-//   transform-origin: right;
-//   animation: slideRTL .8s ease-out;
-// }
-
-// // Right To Left
-// @keyframes slideRTL {
-//   0% {
-//     opacity: 0;
-//     transform: scaleX(0);
-//   }
-//   100% {
-//     opacity: 1;
-//     transform: scaleX(100%);
-//   }
-// }
-
-// .animate-hero-image {
-//   transform-origin: right;
-//   animation: heroIna .8s ease-out;
-//   animation-delay: 0.4s;
-// }
-
-// @keyframes heroIna {
-//   0% {
-//     opacity: 0;
-//     // transform: scaleX(0) ;
-//   }
-//   100% {
-//     opacity: 1;
-//     // transform: scaleX(100%) ;
-//   }
-// }
