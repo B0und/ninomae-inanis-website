@@ -27,7 +27,11 @@ html {
   }
 }
 
-
+@include phone {
+  html {
+    scroll-snap-type: none;
+  }
+}
 
 body {
   font-family: 'Rubik', sans-serif;
@@ -96,13 +100,23 @@ img {
 }
 
 .art-section {
+  padding-top: 1rem;
   height: 100%;
   min-height: 100vh;
   text-align: center;
 
+  @include phone {
+    min-height: 100%;
+    padding-bottom: 1rem;
+  }
+
   p {
     color: $violet300;
     font-size: 3.6rem;
+
+    @include phone {
+      font-size: 2.4rem;
+    }
   }
   button {
     color: $violet300-off;
@@ -116,6 +130,10 @@ img {
     z-index: 3;
     cursor: pointer;
     transition: all 0.25s ease-in-out;
+
+    @include phone {
+      font-size: 8.4rem;
+    }
 
     &:focus {
       border-bottom: 3px solid #9f0bcc;
@@ -134,7 +152,7 @@ img {
 
 .art-img-container {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: repeat(3, 1fr);
   gap: 1rem;
   align-items: center;
   margin-bottom: 15rem;
@@ -148,6 +166,10 @@ img {
       transform: scale(1.05);
       filter: drop-shadow(0px 0px 20px rgba(177, 91, 226, 0.733));
     }
+  }
+
+  @include phone {
+    grid-template-columns: 1fr;
   }
 }
 
@@ -180,7 +202,7 @@ img {
 ///////////////////////
 
 .wah-sound {
-  // height: 100%;
+  min-height: 90vh;
   position: relative;
 }
 
@@ -246,6 +268,12 @@ img {
 .song {
   padding-top: 5rem;
   gap: 5rem;
+
+  @include phone {
+    min-height: 90vh;
+  }
+
+
   h2 {
     display: block;
     color: $violet300;
@@ -255,6 +283,10 @@ img {
     text-transform: uppercase;
     font-weight: 500;
     letter-spacing: 0.085em;
+
+    @include phone {
+      font-size: 6.4rem;
+    }
   }
 
   .video {
@@ -263,6 +295,11 @@ img {
     width: 100%;
     height: 0;
     padding-bottom: 40%;
+
+    @include phone {
+      padding-bottom: 70%;
+
+    }
   }
   .video__embed {
     position: absolute;
@@ -290,11 +327,30 @@ footer {
   gap: 5rem;
   grid-template-columns: minmax(100px, 1fr) 3fr;
 
+  @include phone {
+    max-width: 90vw;
+    grid-template-columns: 1fr;
+    padding: 0 10px;
+    gap: 0;
+    margin-bottom: 100px;
+  }
+
   img {
     position: absolute;
     top: -20%;
     left: -10%;
     filter: drop-shadow(3px 3px 3px rgb(67, 18, 146));
+
+    @include phone {
+      position: static;
+      transform: scale(0.8);
+    }
+  }
+}
+
+@include phone {
+  .placeholder {
+    display: none;
   }
 }
 
@@ -313,6 +369,12 @@ footer {
 
     font-size: 4.8rem;
     font-style: italic;
+
+    @include phone  {
+      font-size: 3rem;
+      margin-top: -50px;
+    }
+
     &::before {
       content: open-quote;
     }
@@ -328,6 +390,10 @@ footer {
       opacity: 0.4;
       top: 0.2em;
       position: relative;
+
+      @include phone {
+        font-size: 5rem;
+      }
     }
   }
 }
@@ -340,6 +406,12 @@ footer {
   width: 100%;
   margin-right: 10rem;
   gap: 3rem;
+
+  @include phone {
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 50px;
+  }
 
   a {
     &:focus {

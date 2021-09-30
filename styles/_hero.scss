@@ -14,7 +14,7 @@
   border-radius: $hero-card-border-radius;
 
   @include phone {
-    // padding-right: 2rem;
+ 
     margin-right: 3rem;
   }
 }
@@ -36,13 +36,15 @@
 
   border-radius: $hero-card-border-radius;
   border-bottom-right-radius: 0;
-  background-color: $hero-name-bg;
+  background-color: $hero-name-bg; 
+
 
   @include phone {
     height: $hero-name-bg-height / 1.5;
     top: -$hero-name-bg-height/ 3;
     width: 90%;
     padding-left: 2.5rem;
+    transform: translateX(10px);
    
 
   }
