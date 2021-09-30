@@ -49,7 +49,7 @@ const wahTextAnimation = anime({
 var wahTimeline = anime.timeline({
   autoplay: false,
   complete: function () {
-    document.querySelector('.wah-button img').onclick = wahClick
+    document.querySelector('.wah-button').onclick = wahClick
     targetElm.style.filter =
       'brightness(0.05) drop-shadow(0px 0px 20px rgba(177, 91, 226, 0.733)'
 
@@ -66,7 +66,6 @@ wahTimeline
         targetElm.style.filter = 'brightness(' + anim.progress / 100 + ')'
       },
     },
-    '+=1000'
   )
   .add({
     begin: () => {
@@ -76,11 +75,11 @@ wahTimeline
   })
 
 const wahClick = () => {
-  document.querySelector('.wah-button img').onclick = null
+  document.querySelector('.wah-button').onclick = null
   waveOutAnimation.restart()
   waveOutAnimation.pause()
   waveInAnimation.play()
   wahTimeline.play()
 }
 
-document.querySelector('.wah-button img').onclick = wahClick
+document.querySelector('.wah-button').onclick = wahClick

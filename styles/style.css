@@ -378,14 +378,16 @@ img {
   justify-content: center;
   cursor: pointer;
   height: 100%;
-  width: 70vw;
+  width: 50vw;
   background: none;
   border: none;
+  margin: 0 auto;
+  overflow: visible;
 }
 .wah-button img {
   display: block;
   position: absolute;
-  bottom: 15%;
+  bottom: 14%;
   filter: brightness(0.05) drop-shadow(0px 0px 20px rgba(177, 91, 226, 0.733));
 }
 .wah-button img:hover {
@@ -423,9 +425,8 @@ img {
 .song .video {
   position: relative;
   margin-bottom: 5rem;
-  width: 100%;
-  height: 0;
-  padding-bottom: 40%;
+  width: 70%;
+  aspect-ratio: 16/9;
 }
 @media screen and (max-width: 415px) {
   .song .video {
