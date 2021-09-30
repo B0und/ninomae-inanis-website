@@ -12,6 +12,11 @@
 
   background-color: $hero-container-bg;
   border-radius: $hero-card-border-radius;
+
+  @include phone {
+    // padding-right: 2rem;
+    margin-right: 3rem;
+  }
 }
 
 .hero__name-bg {

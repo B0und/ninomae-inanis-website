@@ -10,6 +10,11 @@
   background-color: #362d43;
   border-radius: 20px;
 }
+@media screen and (max-width: 415px) {
+  .hero__bg {
+    margin-right: 3rem;
+  }
+}
 
 .hero__name-bg {
   position: absolute;
@@ -233,6 +238,7 @@ img {
     height: 100%;
     padding-top: 100px;
     padding-bottom: 100px;
+    padding: 10rem 0.5rem;
   }
 }
 
