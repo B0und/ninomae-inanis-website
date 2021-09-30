@@ -1,7 +1,6 @@
 @use 'variables' as v;
 @use 'hero';
-@use "media_queries" as mq;
-
+@use 'media_queries' as mq;
 
 *,
 *::after,
@@ -195,6 +194,7 @@ img {
   font-size: 4.8rem !important;
   background-image: linear-gradient(#fbff00, #ff0000) !important;
   color: transparent !important;
+  -webkit-background-clip: text !important;
   background-clip: text !important;
   border-bottom: 3px solid #ff00007c !important;
   margin-bottom: 3px !important;
@@ -275,7 +275,6 @@ img {
     min-height: 90vh;
   }
 
-
   h2 {
     display: block;
     color: v.$violet300;
@@ -300,7 +299,6 @@ img {
 
     @include mq.phone {
       padding-bottom: 70%;
-
     }
   }
   .video__embed {
@@ -372,7 +370,7 @@ footer {
     font-size: 4.8rem;
     font-style: italic;
 
-    @include mq.phone  {
+    @include mq.phone {
       font-size: 3rem;
       margin-top: -50px;
     }

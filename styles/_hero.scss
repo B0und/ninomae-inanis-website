@@ -1,7 +1,6 @@
 @use 'media_queries' as mq;
-@use "sass:math";
+@use 'sass:math';
 @use 'variables' as v;
-
 
 .hero__bg {
   transform-origin: right;
@@ -17,19 +16,13 @@
   border-radius: v.$hero-card-border-radius;
 
   @include mq.phone {
- 
     margin-right: 3rem;
   }
 }
 
-
-
-
-
-
 .hero__name-bg {
   position: absolute;
-  top: -1 * math.div(v.$hero-name-bg-height,2);
+  top: -1 * math.div(v.$hero-name-bg-height, 2);
   right: 0;
 
   transform-origin: right;
@@ -44,16 +37,14 @@
 
   border-radius: v.$hero-card-border-radius;
   border-bottom-right-radius: 0;
-  background-color: v.$hero-name-bg; 
-
+  background-color: v.$hero-name-bg;
 
   @include mq.phone {
-    height: math.div(v.$hero-name-bg-height,1.5);
-    top: -1* math.div(v.$hero-name-bg-height,3);
+    height: math.div(v.$hero-name-bg-height, 1.5);
+    top: -1 * math.div(v.$hero-name-bg-height, 3);
     width: 90%;
     padding-left: 2.5rem;
     transform: translateX(10px);
-  
   }
 
   h1 {
@@ -71,16 +62,15 @@
 .hero-container {
   display: flex;
   margin-top: v.$hero-container-top-margin;
-  padding-left: math.div(v.$hero-name-bg-height ,4.7);
+  padding-left: math.div(v.$hero-name-bg-height, 4.7);
 
   @include mq.phone {
-    margin-top: math.div(v.$hero-container-top-margin , 1.5);
+    margin-top: math.div(v.$hero-container-top-margin, 1.5);
   }
 
   h2 {
     opacity: 0;
     font-size: 2.4rem;
-    // min-width: 50ch;
     text-transform: uppercase;
     font-weight: 500;
     color: v.$violet400;
@@ -175,13 +165,12 @@
 
   @include mq.phone {
     // margin:0 auto;
-  //  margin-left: auto;
-  margin-bottom: 40px;
-  // margin-left: auto;
-  margin: 20px auto;
+    //  margin-left: auto;
+    margin-bottom: 40px;
+    // margin-left: auto;
+    margin: 20px auto;
 
-  filter: drop-shadow(0px 0px 10px rgba(197, 115, 38, 0.678));
-
+    filter: drop-shadow(0px 0px 10px rgba(197, 115, 38, 0.678));
 
     svg path:nth-child(13) {
       fill: #c51751;
