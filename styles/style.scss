@@ -42,10 +42,7 @@ body {
 }
 
 img {
-  // display: block;
   max-width: 100%;
-
-  // max-height: 70vh;
 }
 
 .sr-only {
@@ -142,6 +139,8 @@ img {
     }
 
     &:hover {
+      transform: scale(1.05);
+      filter: drop-shadow(0px 0px 20px rgba(177, 91, 226, 0.733));
       color: v.$violet200;
     }
   }
@@ -163,10 +162,7 @@ img {
     margin: 0 auto;
     transition: all 0.25s ease-in-out;
 
-    &:hover {
-      transform: scale(1.05);
-      filter: drop-shadow(0px 0px 20px rgba(177, 91, 226, 0.733));
-    }
+   
   }
 
   @include mq.phone {
