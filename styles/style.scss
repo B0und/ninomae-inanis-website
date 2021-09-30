@@ -1,5 +1,7 @@
-@import 'variables';
-@import 'hero';
+@use 'variables' as v;
+@use 'hero';
+@use "media_queries" as mq;
+
 
 *,
 *::after,
@@ -27,7 +29,7 @@ html {
   }
 }
 
-@include phone {
+@include mq.phone {
   html {
     scroll-snap-type: none;
   }
@@ -63,8 +65,8 @@ img {
   background-color: #e2dee8;
   background-image: linear-gradient(
       0deg,
-      $bg-pattern1-color,
-      $bg-pattern1-color
+      v.$bg-pattern1-color,
+      v.$bg-pattern1-color
     ),
     url('/assets/bg-pattern1.jpg');
 }
@@ -74,8 +76,8 @@ img {
   background-color: #362d43;
   background-image: linear-gradient(
       0deg,
-      $bg-pattern2-color,
-      $bg-pattern2-color
+      v.$bg-pattern2-color,
+      v.$bg-pattern2-color
     ),
     url('/assets/bg-pattern1.jpg');
 }
@@ -91,7 +93,7 @@ img {
   height: 100vh;
   padding: 0.5rem calc((100vw - 1400px) / 2);
 
-  @include tablet {
+  @include mq.tablet {
     height: 100%;
     padding-top: 100px;
     padding-bottom: 100px;
@@ -105,21 +107,21 @@ img {
   min-height: 100vh;
   text-align: center;
 
-  @include phone {
+  @include mq.phone {
     min-height: 100%;
     padding-bottom: 1rem;
   }
 
   p {
-    color: $violet300;
+    color: v.$violet300;
     font-size: 3.6rem;
 
-    @include phone {
+    @include mq.phone {
       font-size: 2.4rem;
     }
   }
   button {
-    color: $violet300-off;
+    color: v.$violet300-off;
     background: none;
     border: none;
     font-size: 9.6rem;
@@ -131,7 +133,7 @@ img {
     cursor: pointer;
     transition: all 0.25s ease-in-out;
 
-    @include phone {
+    @include mq.phone {
       font-size: 8.4rem;
     }
 
@@ -141,7 +143,7 @@ img {
     }
 
     &:hover {
-      color: $violet200;
+      color: v.$violet200;
     }
   }
 }
@@ -168,7 +170,7 @@ img {
     }
   }
 
-  @include phone {
+  @include mq.phone {
     grid-template-columns: 1fr;
   }
 }
@@ -217,7 +219,7 @@ img {
   margin: auto;
   font-size: 15rem;
   z-index: 50;
-  color: $violet400;
+  color: v.$violet400;
   opacity: 0;
   transform: scale(2);
   transform: translateZ(0);
@@ -229,7 +231,7 @@ img {
   position: absolute;
   bottom: 0;
   width: 100%;
-  height: $desk-height;
+  height: v.$desk-height;
   background-color: #855748;
   border-top: 4px solid rgba(43, 40, 40, 0.541);
 }
@@ -247,7 +249,7 @@ img {
   img {
     display: block;
     position: absolute;
-    bottom: $desk-height;
+    bottom: v.$desk-height;
     filter: brightness(0.05) drop-shadow(0px 0px 20px rgba(177, 91, 226, 0.733));
 
     &:hover {
@@ -269,14 +271,14 @@ img {
   padding-top: 5rem;
   gap: 5rem;
 
-  @include phone {
+  @include mq.phone {
     min-height: 90vh;
   }
 
 
   h2 {
     display: block;
-    color: $violet300;
+    color: v.$violet300;
     margin: auto 0;
 
     font-size: 9.6rem;
@@ -284,7 +286,7 @@ img {
     font-weight: 500;
     letter-spacing: 0.085em;
 
-    @include phone {
+    @include mq.phone {
       font-size: 6.4rem;
     }
   }
@@ -296,7 +298,7 @@ img {
     height: 0;
     padding-bottom: 40%;
 
-    @include phone {
+    @include mq.phone {
       padding-bottom: 70%;
 
     }
@@ -327,7 +329,7 @@ footer {
   gap: 5rem;
   grid-template-columns: minmax(100px, 1fr) 3fr;
 
-  @include phone {
+  @include mq.phone {
     max-width: 90vw;
     grid-template-columns: 1fr;
     padding: 0 10px;
@@ -341,14 +343,14 @@ footer {
     left: -10%;
     filter: drop-shadow(3px 3px 3px rgb(67, 18, 146));
 
-    @include phone {
+    @include mq.phone {
       position: static;
       transform: scale(0.8);
     }
   }
 }
 
-@include phone {
+@include mq.phone {
   .placeholder {
     display: none;
   }
@@ -362,7 +364,7 @@ footer {
 
   blockquote {
     quotes: '“' '”';
-    color: $violet900;
+    color: v.$violet900;
     white-space: nowrap;
     padding: 0 auto;
     width: 100%;
@@ -370,7 +372,7 @@ footer {
     font-size: 4.8rem;
     font-style: italic;
 
-    @include phone  {
+    @include mq.phone  {
       font-size: 3rem;
       margin-top: -50px;
     }
@@ -391,7 +393,7 @@ footer {
       top: 0.2em;
       position: relative;
 
-      @include phone {
+      @include mq.phone {
         font-size: 5rem;
       }
     }
@@ -407,7 +409,7 @@ footer {
   margin-right: 10rem;
   gap: 3rem;
 
-  @include phone {
+  @include mq.phone {
     margin-right: auto;
     margin-left: auto;
     margin-bottom: 50px;

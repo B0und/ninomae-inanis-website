@@ -1,4 +1,7 @@
-@import 'media_queries';
+@use 'media_queries' as mq;
+@use "sass:math";
+@use 'variables' as v;
+
 
 .hero__bg {
   transform-origin: right;
@@ -10,52 +13,56 @@
   max-height: Max(470px, 55%);
   width: 95%;
 
-  background-color: $hero-container-bg;
-  border-radius: $hero-card-border-radius;
+  background-color: v.$hero-container-bg;
+  border-radius: v.$hero-card-border-radius;
 
-  @include phone {
+  @include mq.phone {
  
     margin-right: 3rem;
   }
 }
 
+
+
+
+
+
 .hero__name-bg {
   position: absolute;
-  top: -$hero-name-bg-height/2;
+  top: -1 * math.div(v.$hero-name-bg-height,2);
   right: 0;
 
   transform-origin: right;
   will-change: transform;
 
-  height: $hero-name-bg-height;
+  height: v.$hero-name-bg-height;
   width: 95%;
 
   display: flex;
   align-items: center;
   padding-left: 5rem;
 
-  border-radius: $hero-card-border-radius;
+  border-radius: v.$hero-card-border-radius;
   border-bottom-right-radius: 0;
-  background-color: $hero-name-bg; 
+  background-color: v.$hero-name-bg; 
 
 
-  @include phone {
-    height: $hero-name-bg-height / 1.5;
-    top: -$hero-name-bg-height/ 3;
+  @include mq.phone {
+    height: math.div(v.$hero-name-bg-height,1.5);
+    top: -1* math.div(v.$hero-name-bg-height,3);
     width: 90%;
     padding-left: 2.5rem;
     transform: translateX(10px);
-   
-
+  
   }
 
   h1 {
     opacity: 0;
     font-weight: 500;
     font-size: 4.8rem;
-    color: $violet200;
+    color: v.$violet200;
 
-    @include phone {
+    @include mq.phone {
       font-size: 3.2rem;
     }
   }
@@ -63,11 +70,11 @@
 
 .hero-container {
   display: flex;
-  margin-top: $hero-container-top-margin;
-  padding-left: $hero-name-bg-height / 4.7;
+  margin-top: v.$hero-container-top-margin;
+  padding-left: math.div(v.$hero-name-bg-height ,4.7);
 
-  @include phone {
-    margin-top: $hero-container-top-margin / 1.5 ;
+  @include mq.phone {
+    margin-top: math.div(v.$hero-container-top-margin , 1.5);
   }
 
   h2 {
@@ -76,15 +83,15 @@
     // min-width: 50ch;
     text-transform: uppercase;
     font-weight: 500;
-    color: $violet400;
+    color: v.$violet400;
     white-space: nowrap;
     letter-spacing: 1px;
 
-    @include tablet {
+    @include mq.tablet {
       font-size: 2rem;
     }
 
-    @include phone {
+    @include mq.phone {
       font-size: 1.7rem;
     }
   }
@@ -97,14 +104,14 @@
     line-height: 1.4;
     font-size: 1.8rem;
     max-width: 50ch;
-    color: $violet300;
+    color: v.$violet300;
 
     padding-left: 2rem;
     margin-bottom: 2rem;
 
-    border-left: 5px solid $highlight-yellow;
+    border-left: 5px solid v.$highlight-yellow;
 
-    @include phone {
+    @include mq.phone {
       padding-right: 2rem;
       padding-left: 1.5rem;
       font-size: 1.6rem;
@@ -114,7 +121,7 @@
 
 .hero-img-container {
   margin-top: calc(
-    (#{$hero-name-bg-height} / 1.8 + #{$hero-container-top-margin}) * -1
+    (#{v.$hero-name-bg-height} / 1.8 + #{v.$hero-container-top-margin}) * -1
   );
   margin-left: auto;
   z-index: 2;
@@ -122,13 +129,13 @@
   max-width: 600px;
   min-width: 500px;
 
-  @include tablet {
+  @include mq.tablet {
     // max-height: 500px;
     max-width: 200px;
     margin-left: -50px;
   }
 
-  @include phone {
+  @include mq.phone {
     display: none;
   }
 }
@@ -166,7 +173,7 @@
     }
   }
 
-  @include phone {
+  @include mq.phone {
     // margin:0 auto;
   //  margin-left: auto;
   margin-bottom: 40px;

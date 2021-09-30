@@ -2,5 +2,4 @@
   "includePaths": [
     "node_modules"
   ],
-  "outputStyle": "nested"
 }
