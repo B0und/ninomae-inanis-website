@@ -26,17 +26,35 @@
   border-bottom-right-radius: 0;
   background-color: #514268;
 }
+@media screen and (max-width: 415px) {
+  .hero__name-bg {
+    height: 16.6666666667%;
+    top: -8.3333333333%;
+    width: 90%;
+    padding-left: 2.5rem;
+  }
+}
 .hero__name-bg h1 {
   opacity: 0;
   font-weight: 500;
   font-size: 4.8rem;
   color: #ddd6fe;
 }
+@media screen and (max-width: 415px) {
+  .hero__name-bg h1 {
+    font-size: 3.2rem;
+  }
+}
 
 .hero-container {
   display: flex;
   margin-top: 10rem;
   padding-left: 5.3191489362%;
+}
+@media screen and (max-width: 415px) {
+  .hero-container {
+    margin-top: 6.6666666667rem;
+  }
 }
 .hero-container h2 {
   opacity: 0;
@@ -46,6 +64,16 @@
   color: #a78bfa;
   white-space: nowrap;
   letter-spacing: 1px;
+}
+@media screen and (max-width: 800px) {
+  .hero-container h2 {
+    font-size: 2rem;
+  }
+}
+@media screen and (max-width: 415px) {
+  .hero-container h2 {
+    font-size: 1.7rem;
+  }
 }
 .hero-container p {
   opacity: 0;
@@ -60,6 +88,13 @@
   margin-bottom: 2rem;
   border-left: 5px solid #f4a560;
 }
+@media screen and (max-width: 415px) {
+  .hero-container p {
+    padding-right: 2rem;
+    padding-left: 1.5rem;
+    font-size: 1.6rem;
+  }
+}
 
 .hero-img-container {
   margin-top: calc( (25% / 1.8 + 10rem) * -1 );
@@ -72,6 +107,12 @@
 @media screen and (max-width: 800px) {
   .hero-img-container {
     max-width: 200px;
+    margin-left: -50px;
+  }
+}
+@media screen and (max-width: 415px) {
+  .hero-img-container {
+    display: none;
   }
 }
 
@@ -85,10 +126,15 @@
 }
 
 .hero-btn {
+  display: block;
+  transform-origin: center;
   opacity: 0;
   border: none;
   background: none;
   cursor: pointer;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
   transition: all 0.15s linear;
 }
 .hero-btn:focus {
@@ -100,6 +146,16 @@
 }
 .hero-btn:hover svg path:nth-child(13), .hero-btn:focus svg path:nth-child(13) {
   fill: #c51751;
+}
+@media screen and (max-width: 415px) {
+  .hero-btn {
+    margin-bottom: 40px;
+    margin: 20px auto;
+    filter: drop-shadow(0px 0px 10px rgba(197, 115, 38, 0.678));
+  }
+  .hero-btn svg path:nth-child(13) {
+    fill: #c51751;
+  }
 }
 
 *,

@@ -2,4 +2,10 @@
     @media screen and (max-width: 800px) {
       @content;
     }
+}
+
+@mixin phone {
+    @media screen and (max-width: 415px) {
+      @content;
+    }
   }
