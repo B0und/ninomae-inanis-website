@@ -160,11 +160,15 @@
             </a>
           </div>
           <div class="hero-img-container animate-hero-image">
-            <img
-              class="hero-img"
-              src="assets/hero-ina.png"
-              alt="Ninomae Inanis floating around"
-            />
+            <picture>
+              <source srcset="assets/hero-ina.webp" type="image/webp" />
+              <source srcset="assets/hero-ina.png" type="image/png" />
+              <img
+                class="hero-img"
+                src="assets/hero-ina.png"
+                alt="Ninomae Inanis floating around"
+              />
+            </picture>
           </div>
         </div>
       </div>
@@ -194,21 +198,58 @@
         </div>
       </div>
       <div class="art-img-container">
-        <img
-          id="img-1"
-          src="assets/art-img3.jpg"
-          alt="Calliope Mori illustration drawn by Ina"
-        />
-        <img
-          id="img-2"
-          src="assets/art-img2.jpg"
-          alt="Ninomae Ina illustration drawn by Ina"
-        />
-        <img
-          id="img-3"
-          src="assets/art-img1.jpg"
-          alt="Gawr Gura illustration drawn by Ina"
-        />
+        <picture>
+          <source
+            id="img1src1"
+            srcset="assets/art-img3.avif"
+            type="image/avif"
+          />
+          <source
+            id="img1src2"
+            srcset="assets/art-img3.jpg"
+            type="image/jpeg"
+          />
+          <img
+            id="img1src3"
+            src="assets/art-img3.jpg"
+            alt="Calliope Mori illustration drawn by Ina"
+          />
+        </picture>
+        <picture>
+          <source
+            id="img2src1"
+            srcset="assets/art-img2.avif"
+            type="image/avif"
+          />
+          <source
+            id="img2src2"
+            srcset="assets/art-img2.jpg"
+            type="image/jpeg"
+          />
+          <img
+            id="img2src3"
+            src="assets/art-img2.jpg"
+            alt="Ninomae Ina illustration drawn by Ina"
+          />
+        </picture>
+        <picture>
+          <source
+            id="img3src1"
+            srcset="assets/art-img1.avif"
+            type="image/avif"
+          />
+          <source
+            id="img3src2"
+            srcset="assets/art-img1.jpg"
+            type="image/jpeg"
+          />
+          <img
+            id="img3src3"
+            src="assets/art-img1.jpg"
+            alt="Gawr Gura illustration
+          drawn by Ina"
+          />
+        </picture>
       </div>
     </section>
     <!-- Wah section -->
@@ -217,11 +258,15 @@
     >
       <div class="desk"></div>
       <button class="wah-button">
-        <img
-          class="ina-face"
-          src="assets/ina-face.png"
-          alt="Ina hides in the shadow, waiting for you to click on her"
-        />
+        <picture class="ina-face">
+          <source srcset="assets/ina-face.webp" type="image/webp" />
+          <source srcset="assets/ina-face.png" type="image/png" />
+          <img
+            src="assets/ina-face.png"
+            alt="Ina hides in the shadow, waiting for you to click on her"
+            loading="lazy"
+          />
+        </picture>
         <p class="wah-text">WAH</p>
 
         <svg class="art-ripples" width="100%" height="100%" aria-hidden="true">
@@ -276,16 +321,22 @@
           frameborder="0"
           allow="encrypted-media;"
           allowfullscreen
+          loading="lazy"
         ></iframe>
       </div>
     </section>
     <!-- Footer -->
     <footer class="main-container scrollable-object">
       <div class="social-card">
-        <img
-          src="assets/cute-ina.png"
-          alt="Ina leans on the book and looks at you ina cute way"
-        />
+        <picture>
+          <source srcset="assets/cute-ina.webp" type="image/webp" />
+          <source srcset="assets/cute-ina.png" type="image/png" />
+          <img
+            src="assets/cute-ina.png"
+            alt="Ina leans on the book and looks at you ina cute way"
+            loading="lazy"
+          />
+        </picture>
 
         <div class="placeholder"></div>
         <div class="social-card__content">
