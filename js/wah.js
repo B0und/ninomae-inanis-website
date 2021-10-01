@@ -1,7 +1,7 @@
-let audioUrl = require('../assets/ina-wah-better.mp3');
-let audio = new Audio(audioUrl);
+let audioUrl = require('../assets/ina-wah-better.mp3')
+let audio = new Audio(audioUrl)
 
-var targetElm = document.querySelector('.wah-button img')
+var targetElm = document.querySelector('.wah-button picture')
 
 let intViewportWidth = window.innerWidth
 
@@ -58,15 +58,13 @@ var wahTimeline = anime.timeline({
 })
 
 wahTimeline
-  .add(
-    {
-      duration: 3000,
-      easing: 'easeInOutExpo',
-      update: function (anim) {
-        targetElm.style.filter = 'brightness(' + anim.progress / 100 + ')'
-      },
+  .add({
+    duration: 3000,
+    easing: 'easeInOutExpo',
+    update: function (anim) {
+      targetElm.style.filter = 'brightness(' + (anim.progress / 100 + 0.1) + ')'
     },
-  )
+  })
   .add({
     begin: () => {
       audio.play()

@@ -345,6 +345,11 @@ img {
   min-height: 90vh;
   position: relative;
 }
+@media screen and (max-width: 415px) {
+  .wah-sound {
+    min-height: 60vh;
+  }
+}
 
 .wah-text {
   backface-visibility: hidden;
@@ -404,6 +409,9 @@ img {
 @media screen and (max-width: 415px) {
   .song {
     min-height: 90vh;
+    gap: 0;
+    padding-top: 0;
+    min-height: 70vh;
   }
 }
 .song h2 {
@@ -428,7 +436,7 @@ img {
 }
 @media screen and (max-width: 415px) {
   .song .video {
-    padding-bottom: 70%;
+    width: 90%;
   }
 }
 .song .video__embed {

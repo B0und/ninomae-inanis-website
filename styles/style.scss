@@ -200,6 +200,12 @@ img {
 .wah-sound {
   min-height: 90vh;
   position: relative;
+
+  @include mq.phone {
+    min-height: 60vh;
+
+  }
+
 }
 
 .wah-text {
@@ -266,6 +272,9 @@ img {
 
   @include mq.phone {
     min-height: 90vh;
+    gap: 0;
+    padding-top: 0;
+    min-height: 70vh;
   }
 
   h2 {
@@ -290,7 +299,7 @@ img {
     aspect-ratio: 16/9;
 
     @include mq.phone {
-      padding-bottom: 70%;
+      width: 90%;
     }
   }
   .video__embed {
