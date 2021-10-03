@@ -216,12 +216,12 @@ img {
 
 .light-pattern-bg {
   background-color: #e2dee8;
-  background-image: linear-gradient(0deg, rgba(240, 223, 248, 0.911), rgba(240, 223, 248, 0.911)), url("/assets/bg-pattern1.jpg");
+  background-image: linear-gradient(0deg, rgba(240, 223, 248, 0.911), rgba(240, 223, 248, 0.911)), url("/assets/bg-pattern1.png");
 }
 
 .dark-pattern-bg {
   background-color: #362d43;
-  background-image: linear-gradient(0deg, #362d43f3, #362d43f3), url("/assets/bg-pattern1.jpg");
+  background-image: linear-gradient(0deg, #362d43f3, #362d43f3), url("/assets/bg-pattern1.png");
 }
 
 .main-container {

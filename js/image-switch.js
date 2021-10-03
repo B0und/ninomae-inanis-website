@@ -1,11 +1,11 @@
-let artImg1 = require('../assets/art-img1.jpg')
-let artImg1avif = require('../assets/art-img1.avif')
+let mori = require('../assets/mori.jpg')
+let moriAvif = require('../assets/mori.avif')
 
-let artImg2 = require('../assets/art-img2.jpg')
-let artImg2avif = require('../assets/art-img2.avif')
+let ina = require('../assets/inart.jpg')
+let inaAvif = require('../assets/inart.avif')
 
-let artImg3 = require('../assets/art-img3.jpg')
-let artImg3avif = require('../assets/art-img3.avif')
+let gura = require('../assets/gura.jpg')
+let guraAvif = require('../assets/gura.avif')
 
 let memeImg1 = require('../assets/meme-img1.jpg')
 let memeImg1avif = require('../assets/meme-img1.avif')
@@ -70,17 +70,17 @@ artBtn.addEventListener('click', () => {
     waveAnimation.pause()
   } else {
     artBtn.textContent = 'art'
-    img1src1.srcset = artImg1avif
-    img1src2.srcset = artImg1
-    img1src3.src = artImg1
+    img1src1.srcset = guraAvif
+    img1src2.srcset = gura
+    img1src3.src = gura
 
-    img2src1.srcset = artImg2avif
-    img2src2.srcset = artImg2
-    img2src3.src = artImg2
+    img2src1.srcset = inaAvif
+    img2src2.srcset = ina
+    img2src3.src = ina
 
-    img3src1.srcset = artImg3avif
-    img3src2.srcset = artImg3
-    img3src3.src = artImg3
+    img3src1.srcset = moriAvif
+    img3src2.srcset = mori
+    img3src3.src = mori
     waveAnimation.play()
   }
   document
