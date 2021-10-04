@@ -4,7 +4,8 @@
     "sass": "sass --watch styles/style.scss styles/style.css",
     "dev": "parcel index.html",
     "build": "rm -r dist | parcel build index.html --public-url ./",
-    "deploy": "npm run build && gh-pages --dist 'dist' --branch 'gh-pages'"
+    "deploy": "npm run build && gh-pages --dist 'dist' --branch 'gh-pages'",
+    "deploy1": "rm -r dist | parcel build index.html --public-url https://b0und.github.io/ninomae-inanis-website/ && gh-pages --dist 'dist' --branch 'gh-pages'"
   },
   "devDependencies": {
     "parcel-bundler": "^1.12.5",
